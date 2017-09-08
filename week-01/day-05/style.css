@@ -4,14 +4,36 @@
     height: 1000px;
     background-color: grey;
     margin: 0 auto;
+    position: relative;
 }
 .header {
-    width: 620px;
+    width: 600px;
     height: 50px;
     background-color: yellow;
-    margin: 0 auto;
+    position: absolute;
+    left: 100px;
+    border: 10px solid;
+    margin: 10px 0px 10px 0px;
 }
-.half width box {
+.half-width-box-left {
+    box-sizing: border-box;
+    display: inline-block;
     width: 310px;
-    
+    height: 450px;
+    background-color: yellow;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    border: 10px solid;
+}
+.half-width-box-right {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 310px;
+    height: 450px;
+    background-color: yellow;
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    border: 10px solid;
 }
