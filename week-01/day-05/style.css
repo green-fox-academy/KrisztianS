@@ -20,12 +20,11 @@
     display: inline-block;
     width: 310px;
     height: 450px;
-    background-color: yellow;
+    background-color: #26A66E;
     position: absolute;
     top: 100px;
     left: 100px;
     padding: 10px;
-    margin: 
 }
 .half-width-box-right {
     box-sizing: border-box;
@@ -37,7 +36,6 @@
     top: 100px;
     right: 100px;
     padding: 10px;
-    margin: 
 }
 .low-pos-box {
     box-sizing: border-box;
@@ -48,4 +46,32 @@
     top: 570px;
     left: 100px;
     padding: 10px;
+}
+.inner-box1 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 150px;
+    height: 55px;
+    display: inline-block;
+    background-color: gray;
+    top: 160px;
+}
+.inner-box2 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 145px;
+    height: 55px;
+    display: inline-block;
+    left: 155px;
+    background-color: grey;
+    top: 160px;
+}
+.inner-box3 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 290px;
+    height: 150px;
+    display: inline-block;
+    background-color: grey;
+    top: 260px;
 }
