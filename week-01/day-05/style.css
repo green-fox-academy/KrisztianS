@@ -1,7 +1,7 @@
 .main {
     box-sizing: border-box;
     width: 820px;
-    height: 1000px;
+    height: 800px;
     background-color: grey;
     margin: 0 auto;
     position: relative;
@@ -12,8 +12,8 @@
     background-color: yellow;
     position: absolute;
     left: 100px;
-    border: 10px solid;
-    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    margin-top: 10px;
 }
 .half-width-box-left {
     box-sizing: border-box;
@@ -22,9 +22,10 @@
     height: 450px;
     background-color: yellow;
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 100px;
-    border: 10px solid;
+    padding: 10px;
+    margin: 
 }
 .half-width-box-right {
     box-sizing: border-box;
@@ -33,7 +34,18 @@
     height: 450px;
     background-color: yellow;
     position: absolute;
-    top: 80px;
+    top: 100px;
     right: 100px;
-    border: 10px solid;
+    padding: 10px;
+    margin: 
+}
+.low-pos-box {
+    box-sizing: border-box;
+    width: 620px;
+    height: 150px;
+    background-color: yellow;
+    position: absolute;
+    top: 570px;
+    left: 100px;
+    padding: 10px;
 }
