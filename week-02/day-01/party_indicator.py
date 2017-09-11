@@ -15,7 +15,7 @@
 
 girls = int(input("Girls: "))
 boys = int(input("Boys: "))
-if girls == boys and girls + boys >= 20:
+if girls == boys and girls + boys == 20:
     print("The party is excellent!")
 if girls + boys > 20 and girls / boys != 1:
     print("Quite cool party!")
