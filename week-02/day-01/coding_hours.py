@@ -7,3 +7,5 @@
 # Print the percentage of the coding hours in the semester if the average
 # work hours weekly is 52
 
+print(17*5*6)
+print(str(((17*5*6)/(17*52))*100) + "%")
