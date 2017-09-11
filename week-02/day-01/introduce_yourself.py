@@ -8,3 +8,4 @@
 #  John Doe
 #  31
 #  1.87
+print("Krisztian Szucs\n25\n1.85")
