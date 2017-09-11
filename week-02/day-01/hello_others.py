@@ -4,3 +4,4 @@
 # Hello, Esther!
 # Hello, Mary!
 # Hello, Joe!
+print("Hello, Sanyi!\nHello, Feri!\nHello, Jozsi!")
