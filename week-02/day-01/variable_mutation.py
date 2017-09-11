@@ -38,7 +38,7 @@ print(d)
 e = 8
 # please cube of e's value
 
-e **= 2 
+e **= 3 
 print(e)
 
 
