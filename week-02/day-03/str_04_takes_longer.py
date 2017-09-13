@@ -2,5 +2,5 @@
 # Add "always takes longer than" between the words "It" and "you"
 
 quote = "Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law."
-quote.insert(4 , "always takes longer than")
+quote = quote.replace("It" , "It always takes longer than")
 print(quote)
