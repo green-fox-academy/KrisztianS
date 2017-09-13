@@ -4,6 +4,7 @@
 url = "https//www.reddit.com/r/nevertellmethebots"
 def url_fixer():
     new_url = url[:38] + "odds" + "/"
+    new_url = new_url.replace("//" , "://")
     print(new_url)
 
 url_fixer()
