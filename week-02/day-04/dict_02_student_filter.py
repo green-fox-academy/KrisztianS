@@ -13,9 +13,16 @@ students = [
 #  - how many candies they have on average
 
 def candy_counter():
+    	for i in range(len(students)):
+    		if students[i]["candies"] > 4:
+    			print(students[i]["name"])
 
+def candy_average():
+    sumcandy = 0
+    student_list = len(students)
     for i in range(len(students)):
-        if (students[i]["candies"]) > 4:
-                print(students[i]["name"])
+        sumcandy += students[i]["candies"]
+    print(sumcandy / student_list)
 
 candy_counter()
+candy_average()
