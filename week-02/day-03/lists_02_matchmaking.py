@@ -6,8 +6,7 @@ boys = ["Joe", "Fred", "Béla", "Todd", "Neef", "Jeff"]
 
 one_line = ""
 for i in range(len(girls)):
-    order = girls[i] + "," + boys[i] + ","
-    one_line += order
+   print(girls[i] + "," + boys[i] + ",")
+    
 
 
-print(one_line)
