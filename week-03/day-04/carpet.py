@@ -15,6 +15,7 @@ top_level_lines(600)
 def draw_deeper_lines(num):
     if
     else:
+        pass
         
 
 
