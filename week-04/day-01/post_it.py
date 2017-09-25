@@ -17,5 +17,3 @@ class PostIt(object):
 PostIt_orange = PostIt("orange", "Idea 1", "blue")
 PostIt_pink = PostIt("pink", "Awesome", "black")
 PostIt_yellow = PostIt("pink", "Awesome", "black")
-
-print(PostIt_orange.text)
