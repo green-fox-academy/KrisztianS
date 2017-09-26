@@ -50,3 +50,59 @@ class Sponsor(Person):
     
     def hire(self):
         self.hired_students += 1
+
+class PallidaClass(object):
+
+    def __init__(self, class_name):
+        self.class_name = "Rabbit"
+        self.students = []
+        self.mentors = []
+
+    def add_students(self, student):
+        self.students.append(student)
+    
+    def add_mentors(self, mentor):
+        self.mentors.append(mentor)
+    
+    def info(self):
+        print("Pallida {} class has {} students and {} mentors.".format(self.class_name, len(self.students), len(self.mentors)))
+    
+
+rabbit = PallidaClass("Rabbit")
+
+
+people = []
+
+mark = Person('Mark', 46, 'male')
+people.append(mark)
+jane = Person()
+people.append(jane)
+john = Student('John Doe', 20, 'male', 'BME')
+people.append(john)
+student = Student()
+people.append(student)
+gandhi = Mentor('Gandhi', 148, 'male', 'senior')
+people.append(gandhi)
+mentor = Mentor()
+people.append(mentor)
+sponsor = Sponsor()
+elon = Sponsor('Elon Musk', 46, 'male', 'SpaceX')
+people.append(elon)
+
+
+for i in range(5):
+    elon.hire()
+
+for i in range(3):
+    sponsor.hire()
+
+for member in people:
+    member.introduce()
+    member.get_goal()
+
+badass = PallidaClass('2ABB17')
+badass.add_students(student);
+badass.add_students(john);
+badass.add_mentors(mentor);
+badass.add_mentors(gandhi);
+badass.info();
