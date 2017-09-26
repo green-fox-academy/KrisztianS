@@ -50,7 +50,3 @@ class Sponsor(Person):
     
     def hire(self):
         self.hired_students += 1
-        
-sponsor = Sponsor()
-sponsor.hire()
-sponsor.introduce()
