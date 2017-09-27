@@ -15,3 +15,12 @@ class Apple(object):
         input2_list = list(input2)
         input2_list.sort()
         return input1_list == input2_list
+
+    def count_letter(self, input_string):
+        my_dictionary = {}
+        for letter in input_string:
+            if letter in input_string:
+                my_dictionary[letter] += 1
+            else:
+                my_dictionary[letter] = 1
+        return my_dictionary
