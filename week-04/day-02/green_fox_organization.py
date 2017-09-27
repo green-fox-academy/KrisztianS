@@ -56,7 +56,7 @@ class PallidaClass(object):
     def __init__(self, class_name):
         self.class_name = "Rabbit"
         self.students = []
-        self.mentors = []
+        self.mentors = []   
 
     def add_students(self, student):
         self.students.append(student)
