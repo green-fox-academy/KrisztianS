@@ -19,7 +19,7 @@ class Apple(object):
     def count_letter(self, input_string):
         my_dictionary = {}
         for letter in input_string:
-            if letter in input_string:
+            if letter in my_dictionary:
                 my_dictionary[letter] += 1
             else:
                 my_dictionary[letter] = 1
