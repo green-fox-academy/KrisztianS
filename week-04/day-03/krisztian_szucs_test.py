@@ -20,5 +20,11 @@ class AppleTest(unittest.TestCase):
         numlist = None
         self.assertEqual(my_sum_of_numbers.sum_numbers(numlist), None)
 
+    def test_anagram(self):
+        my_anagram = Apple()
+        input1 = "earth"
+        input2 = "heart"
+        self.assertEqual(my_anagram.anagram(input1, input2), True)
+        
 if __name__ == '__main__':
     unittest.main()
