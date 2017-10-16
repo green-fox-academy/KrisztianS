@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+    margin: 50px;
+    list-style-type: none;
+    height: 280px;
+    display: flex;
+    background-color: #FFD62A;
+    align-items: flex-end;
+    justify-content: flex-end;
+    -webkit-padding-start: 0;
+}
+
+.item {
+    margin-left: 5px;
+    background-color: #B02AFF;
+    width: 106px;
+    height: 106px;
+}
