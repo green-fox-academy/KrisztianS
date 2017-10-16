@@ -1,0 +1,56 @@
+.container {
+    margin: auto;
+    width: 540px;
+    height: 700px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    -webkit-padding-start: 0;
+}
+
+.header {
+    width: 540px;
+    height: 100px;
+    background-color: #02FEFE;
+}
+
+.main_content {
+    width: 300px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    background-color: #FE0000;
+    justify-content: flex-end;
+}
+
+.black_square {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin: 20px;
+    align-self: flex-end;
+}
+
+.sidebar {
+    width: 100px;
+    height: 500px;
+}
+
+.left {
+    background-color: #FEA500;
+}
+
+.right {
+    background-color: #81007F;
+
+}
+
+.footer {
+    width: 540px;
+    height: 100px;
+    background-color: #0000FE;
+}
+
+/* It should be wall to wall with fluid width.
+The sidebars should have fixed with. */
