@@ -1,0 +1,25 @@
+.container {
+    width: 675px;
+    height: 295px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green {
+    width: 190px;
+    height: 190px;
+    background-color: #51D400;
+}
+
+.yellow {
+    width: 190px;
+    height: 190px;
+    background-color: #FFD62A;
+}
+
+.purple {
+    width: 190px;
+    height: 190px;
+    background-color: #B02AFF;
+}
