@@ -1,0 +1,63 @@
+.container {
+    margin: auto;
+    width: 540px;
+    height: 700px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    -webkit-padding-start: 0;
+}
+
+.header {
+    width: 540px;
+    height: 100px;
+    background-color: #02FEFE;
+}
+
+.main_content {
+    width: 300px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    background-color: #FE0000;
+    justify-content: flex-end;
+}
+
+.black_square {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin: 20px;
+    align-self: flex-end;
+}
+
+.sidebar {
+    width: 100px;
+    height: 500px;
+}
+
+.left {
+    background-color: #FEA500;
+}
+
+.right {
+    background-color: #81007F;
+
+}
+
+.footer {
+    width: 540px;
+    height: 100px;
+    background-color: #0000FE;
+}
+
+/* <!-- It should be centered on the page.
+It should have fixed width.
+When picking the semantically correct element, consider the roles of the boxes:
+Aqua (light blue): Header
+Orange: Left sidebar (not main content)
+Red: Main Content
+Black: Fixed content on the bottom right of the Main content
+Purple: Right sidebar (not main content)
+Blue: Footer --> */
