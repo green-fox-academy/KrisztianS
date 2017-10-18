@@ -1,0 +1,39 @@
+div {
+    margin: 0 auto;
+    width: 870px;
+    height: 580px;
+    background-color: #3E94EC;
+    display: flex;
+    align-items: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 800px;
+    height: 510px;
+    font-family: "arial";
+    color: #72778E;
+    text-align: left;
+    border-spacing: 1;
+    background-color: #9EA7AF;
+}
+
+th {
+    background-color: #1B1E24;
+    color: #72778E;
+    font-weight: normal;
+    font-size: 20px;
+    padding: 30px;
+}
+
+td {
+    padding: 30px;
+}
+
+tr {
+    background-color: #FFFFFF;
+}
+
+.gray {
+    background-color: #EBEBEB;
+}
