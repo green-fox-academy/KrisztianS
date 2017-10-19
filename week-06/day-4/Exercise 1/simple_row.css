@@ -1,0 +1,20 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-auto-rows: 270px;
+    border: 15px solid #B02AFF;
+    color: white;
+    font-size: 30px;
+    line-height: 270px;
+    text-align: center;
+    font-family: "calibri";
+}
+
+.side {
+    background-color: #FFD62A;
+}
+
+.middle {
+    background-color: #51D400;
+}
