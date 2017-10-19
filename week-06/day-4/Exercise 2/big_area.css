@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+.container {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+    grid-template-areas: "purple1 green green"
+                         "purple2 green green"
+                         "purple3 purple4 purple5";
+}
+
+.pbox {
+    background-color: #B02AFF;
+}
+
+.green {
+    background-color: #51D400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yellow {
+    background-color: #FFD62A;
+    width: 75%;
+    height: 70%;
+}
+
+.purple1 {
+    grid-area: purple1;
+}
+
+.purple2 {
+    grid-area: purple2;
+}
+
+.purple3 {
+    grid-area: purple3;
+}
+
+.purple4 {
+    grid-area: purple4;
+}
+
+.purple5 {
+    grid-area: purple5;
+}
+
+.green {
+    grid-area: green;
+}
