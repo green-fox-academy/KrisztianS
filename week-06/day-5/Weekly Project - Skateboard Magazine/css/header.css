@@ -1,0 +1,62 @@
+* {
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    color:#1f1f1f;
+    /* font-family: 'Patua One', cursive; */
+}
+
+body {
+    margin-top: 0;
+}
+.header-link {
+    display: flex;
+    width: 6rem;
+    height: 5.4rem;
+    border-right: 1px solid #a5a5a5;
+    align-items: center;
+
+}
+.header-logo {
+    width: 4.2rem;
+    height: 4.2rem;
+    padding-left: 0.7rem;
+}
+
+header {
+    display: flex;
+    width: 95.5rem;
+    height: 5,4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navlist li {
+    display: inline;
+    line-height: 5,4rem;
+    list-style-type: none;
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+ul {
+    margin: 0rem;
+    padding-right: 8rem;
+}
+
+.cart {
+    height: 5.4rem;
+    width: 6.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid #a5a5a5;
+    background-color: #F3F3F3;
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+.cart-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
