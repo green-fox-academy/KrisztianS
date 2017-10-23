@@ -60,3 +60,16 @@ ul {
     width: 1.8rem;
     height: 1.8rem;
 }
+
+.cart:hover {
+    filter: brightness(90%);
+}
+
+.cart-icon:hover {
+    transform: rotate(-30deg);
+
+}
+nav ul li:hover {
+    background-color: #F3F3F3;
+    border-radius: 0.25rem;
+}
