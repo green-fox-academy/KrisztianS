@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+</head>
+<body>
+    <div class="small_images"></div>
+    <script>
+        'use strict';
+
+        let body = document.querySelector('.body')
+
+        function getArticles(callback) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET',"https://api.nytimes.com/svc/search/v2/articlesearch.json?apikey=14cba2e50e064fe68a6b6823dfc891cd&q=moon+landing+by+apollo+11");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    let articles_json = JSON.parse(xhr.responseText)
+                    console.log(articles_json)
+                    callback(articles_json);
+                }
+            }
+            xhr.send()
+        }
+
+        function displayArticles(data) {
+            articles_json.forEach(function(article) {
+                let single_article = document.createElement('article')
+                let url = response.docs.web_url
+                single_article.src = url
+                body.appendChild(single_article)
+            }
+        )
+        }
+
+        getArticles(displayArticles)
+    </script>
+</body>
+</html>
