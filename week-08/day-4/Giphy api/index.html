@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+</head>
+<body>
+    <div class="small_images"></div>
+    <script>
+        'use strict';
+
+        let body = document.querySelector('body')
+
+        function getGifs(callback) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET',"http://api.giphy.com/v1/gifs/search?q=fail&api_key=t4Gsj0FYnPk0a4wMH8gdluE9DhV7UOtQ&limit=16");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    let gifs = JSON.parse(xhr.responseText).data
+                    callback(gifs);
+                }
+            }
+            xhr.send()
+        }
+
+        function displayGifs(data) {
+            data.forEach(function(gif) {
+                let img = document.createElement('img')
+                let url = gif.images.downsized_still.url
+                img.src = url
+                body.appendChild(img)
+                
+            });
+        }
+
+        let a = getGifs(displayGifs)
+    </script>
+</body>
+</html>
