@@ -11,11 +11,12 @@
     <script>
         'use strict';
 
-        let body = document.querySelector('body')
+        let big_image = document.querySelector('.big_image')
+        let small_images = document.querySelector('.small_images')
 
         function getGifs(callback) {
             let xhr = new XMLHttpRequest();
-            xhr.open('GET',"http://api.giphy.com/v1/gifs/search?q=fail&api_key=t4Gsj0FYnPk0a4wMH8gdluE9DhV7UOtQ&limit=16");
+            xhr.open('GET',"http://api.giphy.com/v1/gifs/search?q=trump&api_key=t4Gsj0FYnPk0a4wMH8gdluE9DhV7UOtQ&limit=16");
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4) {
                     let gifs = JSON.parse(xhr.responseText).data
@@ -28,14 +29,21 @@
         function displayGifs(data) {
             data.forEach(function(gif) {
                 let img = document.createElement('img')
-                let url = gif.images.downsized_still.url
+                let url = gif.images.fixed_height_small_still.url
                 img.src = url
-                body.appendChild(img)
-                
+                small_images.appendChild(img)
+                clickEventListener(img, gif)
             });
+
         }
 
-        let a = getGifs(displayGifs)
+        function clickEventListener(img,gif) {
+            img.addEventListener('click',function() {
+                img.src = gif.images.original.url
+            })
+        }
+
+        getGifs(displayGifs)
     </script>
 </body>
 </html>
