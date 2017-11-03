@@ -1,0 +1,66 @@
+body {
+    margin: 0 auto;
+    background-color:  #DDDDDD;
+}
+
+.header {
+    width: 100%;
+    height: 16rem;
+    background: url(assets/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Lato", sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7A8B71;
+}
+
+.articles {
+    margin: 1.5rem 0rem 1rem 1rem;
+    float: left;
+    width: 55%;
+    height: 30rem;
+    background-color: white;
+}
+
+.submitnew {
+    float: right;
+    margin: 1.5rem 1rem 0rem 1rem;
+    width: 41%;
+    height: 3rem;
+    background-color: #4AA3DF;
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Lato";
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    font-family: "Lato";
+    color: #5E7689;
+    font-size: 1.2rem;
+    float: right;
+    margin: 1rem 1rem 0rem 1rem;
+    width: 41%;
+    height: 16rem;
+    background-color: white;
+}
+
+.aboutparagraph {
+    padding-left: 1rem;
+}
+
+.share {
+    text-align: center;
+}
+
+.about ul {
+    padding-left: 3rem;
+}
