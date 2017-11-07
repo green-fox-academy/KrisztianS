@@ -5,20 +5,21 @@
 // It should add the strings too if the arguments are appropriate.
 
 let  addString = function(str1, str2, printStr){
-    if (typeof(str1) != String || typeof(str2) != String) {
+    if (typeof(str1) != 'string' || typeof(str2) != 'string') {
         throw TypeError("baszki")
+    } else {
+     var newStr = str1 + str2
+    printStr(newStr)
     }
-  let newStr = str1 + str2;
-  printStr(newStr);
 }
 
-let printStr = function(str) {
-  console.log(str);
+var printStr = function(str) {
+  console.log(str)
 }
 
 
 try{
-    addString(1234, 56789, 'printStr');
-}catch(e){
+    addString('fdf', 'dfdfd', printStr)
+} catch(e){
     console.log(e.message)
 }
