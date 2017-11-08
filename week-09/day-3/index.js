@@ -16,8 +16,8 @@ app.get('/doubling', function(req, res){
     } else {
         res.send(
             {
-                "received": req.query.input,
-                "result": req.query.input * 2
+             "received": req.query.input,
+             "result": req.query.input * 2
               })
     } 
 })
@@ -34,8 +34,13 @@ app.get('/greeter', function(req, res){
     }
     else res.send({
         "welcome_message": 'Oh, hi there ' + queryName + ', my dear ' + queryTitle + '!'
-      })
-
+    })
 })
+
+app.get('/appenda/:word', function(req,res) {
+    res.send({
+        "appended": req.params.word + 'a'
+    });
+});
 
 app.listen(8080);
