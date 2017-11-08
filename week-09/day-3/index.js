@@ -18,10 +18,24 @@ app.get('/doubling', function(req, res){
             {
                 "received": req.query.input,
                 "result": req.query.input * 2
-              }
-        )
+              })
+    } 
+})
+
+app.get('/greeter', function(req, res){
+    let queryName = req.query.name
+    let queryTitle = req.query.title
+
+    if (queryName == null) {
+        res.send({"error": "Please provide a name!"})
     }
-    
+    else if (queryTitle == null) {
+        res.send({"error": "Please provide a title!"})
+    }
+    else res.send({
+        "welcome_message": 'Oh, hi there ' + queryName + ', my dear ' + queryTitle + '!'
+      })
+
 })
 
 app.listen(8080);
