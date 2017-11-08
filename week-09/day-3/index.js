@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 
+app.use(express.json())
 app.use('/assets', express.static('./assets'))
 express.json.type = "application/json"
 
@@ -37,10 +38,30 @@ app.get('/greeter', function(req, res){
     })
 })
 
-app.get('/appenda/:word', function(req,res) {
+app.get('/appenda/:word', function(req, res) {
     res.send({
         "appended": req.params.word + 'a'
     });
 });
+
+app.post('/dountil/:operation', function(req, res){
+    if (req.params.operation == 'sum') {
+        var result = 0;
+        for (let i = 0; i <= req.body.until; i++) {
+            result += i
+        }
+    
+    res.send({"result": result})
+
+    } else if (req.params.operation == 'factor') {
+        var result = 1
+        for (let i = 1; i <= req.body.until; i++) {
+            result *= i
+        }
+    
+    res.send({"result": result})
+    }
+
+})
 
 app.listen(8080);
