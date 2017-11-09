@@ -24,12 +24,17 @@ conn.connect(function(err){
 });
 
 app.get('/', function(req, res){
-    conn.query("SELECT * FROM author;",function(err,rows){
-        console.log("Data received from Db:\n");
-        console.log(rows);
-      });
-    //   res.sendFile(__dirname + '/index.html');  
+    res.sendFile(__dirname + '/index.html');  
+})
+
+app.get('/booktitles', function(req, res){
+    conn.query("SELECT book_name FROM book_mast;", function(err, rows){
+        var booklist = []
+        rows.forEach(function(rows){
+            booklist.push(rows.book_name)
+        })
+        res.json(booklist)
+    })
 })
 
 app.listen(8080)
-// + MySQL lekeres, + send html a lekeres eredmenyeivel table formatumban
