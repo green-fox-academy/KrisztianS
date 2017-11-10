@@ -1,8 +1,10 @@
 'use strict'
+
 var booklist = document.querySelector('.booklist')
-function ajax(callback) {
+
+function ajax(method, endpoint, callback) {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:8080/booktitles');
+    xhr.open(method, endpoint);
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             let resp = JSON.parse(xhr.responseText)
@@ -12,14 +14,13 @@ function ajax(callback) {
     xhr.send()
 }
 
-function renderBooks(resp) {
-    resp.forEach(function(resp){
-        console.log(resp)
-        let bname = document.createElement('tr')
-        bname.innerHTML = resp
-        booklist.appendChild(bname)
-
+function renderBooks(res) {
+    res.forEach(function(res){
+        console.log(res)
+        let bookname = document.createElement('li')
+        bookname.innerHTML = res
+        booklist.appendChild(bookname)
     })
 }
 
-ajax(renderBooks)
+ajax('GET', '/booktitles', renderBooks)
