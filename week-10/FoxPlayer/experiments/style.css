@@ -1,0 +1,90 @@
+.container {
+    font-family: "Barlow", "sans-serif";
+    color: #525554;
+    margin: 0 auto;
+    background-color: #F6F5F4;
+    width: 50rem;
+    height: 27rem;
+    border-radius: 0.4rem;
+    display: grid;
+    grid-template-columns: 16rem 9rem 25rem;
+    grid-template-rows: 3rem 3rem 3rem 15rem 3rem;
+    grid-template-areas: "logo_notif artwork currently"
+                        "logo_notif artwork tracks"
+                        "playlists playlists tracks"
+                        "playlists playlists tracks"
+                        "control_panel control_panel control_panel";
+    box-shadow: 3px 3px 3px #DEDCD8;
+}
+
+.logo_notif {
+    padding-left: 0.6rem;
+    padding-top: 0.6rem;
+    background-color: #F6F5F4;
+    grid-area: logo_notif;
+    border-radius: 0.4rem 0rem 0rem 0rem;
+    margin: 0.4rem 0rem 0rem 0.4rem;
+}
+
+.currently_played {
+    background-color: #F6F5F4;
+    grid-area: currently;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 0rem 0.4rem 0rem 0rem;
+}
+
+.artwork {
+    background-color: salmon;
+    grid-area: artwork;
+    z-index: 1;
+    height: 9rem;
+    background-image: url(../assets/music-placeholder.png);
+    background-size: contain;
+}
+
+.playlists {
+    background-color: #EBEAE8;
+    grid-area: playlists;
+    padding: 1rem;
+    background: linear-gradient(to bottom, #F6F5F4, #F6F5F4 50%, #EBEAE8 50%, #EBEAE8);
+    background-size: 100% 5rem;
+}
+
+.tracks {
+    background-color: #BCB2A6;
+    grid-area: tracks;
+    background: linear-gradient(to bottom, #F6F5F4, #F6F5F4 50%, #EBEAE8 50%, #EBEAE8);
+    background-size: 100% 5rem;
+}
+
+.control_panel {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    grid-area: control_panel;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currently_played img {
+    height: 1.2rem;
+    width: 1.2  rem;
+    padding: 0.5rem;
+}
+
+.control_panel img {
+    height: 1.2rem;
+    width: 1.2rem;
+    padding: 0.5rem;
+}
+
+.container h3 {
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.track_length {
+    width: 20rem;
+}
