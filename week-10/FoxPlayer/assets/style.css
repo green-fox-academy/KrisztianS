@@ -55,8 +55,9 @@
 } 
 
 .playlist_element {
+    display: flex;
+    align-items: center;
     width: 25rem;
-    height: 3rem;
     line-height: 3rem;
     padding-left: 1rem; 
 }
