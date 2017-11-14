@@ -48,7 +48,7 @@
 .playlists {
     background-color: #EBEAE8;
     grid-area: playlists;
-    padding: 1rem;
+    padding-left: 1rem;
 }
 
 .tracks {
@@ -57,12 +57,14 @@
 }
 
 .control_panel {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     grid-area: control_panel;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
+    border-radius: 0rem 0.4rem 0.4rem 0rem;
 }
 
 .currently_played img {
@@ -79,7 +81,7 @@
 
 .container h3 {
     margin: 0;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .track_length {
@@ -87,5 +89,97 @@
 }
 
 input[type=range] {
-    cursor: pointer;   
+    height: 25px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: #05C9D0;
+    border-radius: 1px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background: #666560;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #05C9D0;
+  }
+  input[type=range]::-moz-range-track {
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: #05C9D0;
+    border-radius: 1px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #05C9D0;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background: #F7F5F3;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    height: 5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #2497E3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #05C9D0;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #05C9D0;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background: #F7F5F3;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #05C9D0;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #05C9D0;
+  }
+
+.playlist_add_box {
+    display: flex;
+}
+
+.playlist_add_box img {
+    padding-top: 1.2rem;
+    padding-left: 8.5rem;
+    height: 1.2rem;
+}
+
+.volume_range {
+    width: 6rem;
 }
