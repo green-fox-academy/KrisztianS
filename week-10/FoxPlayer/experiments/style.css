@@ -28,6 +28,7 @@
 
 .currently_played {
     background-color: #F6F5F4;
+    margin-right: 1rem;
     grid-area: currently;
     display: flex;
     justify-content: flex-end;
@@ -48,15 +49,11 @@
     background-color: #EBEAE8;
     grid-area: playlists;
     padding: 1rem;
-    background: linear-gradient(to bottom, #F6F5F4, #F6F5F4 50%, #EBEAE8 50%, #EBEAE8);
-    background-size: 100% 5rem;
 }
 
 .tracks {
     background-color: #BCB2A6;
     grid-area: tracks;
-    background: linear-gradient(to bottom, #F6F5F4, #F6F5F4 50%, #EBEAE8 50%, #EBEAE8);
-    background-size: 100% 5rem;
 }
 
 .control_panel {
@@ -87,4 +84,8 @@
 
 .track_length {
     width: 20rem;
+}
+
+input[type=range] {
+    cursor: pointer;   
 }
