@@ -64,7 +64,7 @@
 
 .tracks div {
     width: 24rem;
-    height: 3rem;
+    height: 3.75rem;
     line-height: 3rem;
     padding-left: 1rem;
 }
@@ -75,7 +75,7 @@
 
 .playlists_header {
     width: 25rem;
-    height: 3rem;
+    height: 2.25rem;
     line-height: 1rem;
     position: relative;
     padding-left: 1rem;
