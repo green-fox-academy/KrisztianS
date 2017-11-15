@@ -3,8 +3,9 @@
 var playlists = document.querySelector('.playlists')
 var tracks = document.querySelector('.tracks')
 
-function ajax(method, endpoint, callback) {
+function ajax(method, data, endpoint, callback) {
     let xhr = new XMLHttpRequest();
+    data = data ? data : null;
     xhr.open(method, endpoint);
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
@@ -12,9 +13,9 @@ function ajax(method, endpoint, callback) {
             callback(resp);
         }
     }
-    xhr.send()
+    xhr.send(JSON.stringify(data))
 }
 
 const GetPlaylist = function(callback) {
-    ajax('GET', '/playlists', callback)
+    ajax('GET', false, '/playlists', callback)
 }

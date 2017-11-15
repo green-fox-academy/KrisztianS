@@ -9,7 +9,7 @@ const Tracklist = function() {
         })
     }
 
-    ajax('GET', '/alltracks', renderTracks)
+    ajax('GET', false, '/alltracks', renderTracks)
 }
 
 temp = Tracklist()
