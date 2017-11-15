@@ -49,6 +49,7 @@
     grid-area: playlists;
     display: flex;
     flex-wrap: wrap;
+    overflow-y: scroll;
 }
 .playlists > div:nth-child(even) {
     background: #EBEAE8;
@@ -59,11 +60,13 @@
     align-items: center;
     width: 25rem;
     line-height: 3rem;
-    padding-left: 1rem; 
+    padding-left: 1rem;
 }
 
-.tracks div {
-    width: 24rem;
+.track_element {
+    display: flex;
+    align-items: center;
+    width: 22.77rem;
     height: 3.75rem;
     line-height: 3rem;
     padding-left: 1rem;
@@ -81,12 +84,13 @@
     padding-left: 1rem;
 }
 
-.playlists_header img {
+.playlist_add_icon {
     width: 1.2rem;
     height: 1.2rem;
     position: absolute;
     left: 14rem;
     top: 1rem;
+    cursor: pointer;
 }
 
 .container h3 {
@@ -96,7 +100,8 @@
 
 .tracks {
     grid-area: tracks;
-    border-left: 3px solid #ECEAE6
+    border-left: 3px solid #ECEAE6;
+    overflow-y: scroll;
 }
 
 .control_panel {
@@ -131,16 +136,19 @@ input[type=range] {
     height: 25px;
     -webkit-appearance: none;
     margin-top: 0.2rem;
-  }
+}
+
   input[type=range]:focus {
     outline: none;
-  }
+}
+
   input[type=range]::-webkit-slider-runnable-track {
     height: 3px;
     cursor: pointer;
     box-shadow: 0px 0px 0px #000000;
     background: #05C9D0;
-  }
+}
+
   input[type=range]::-webkit-slider-thumb {
     box-shadow: 0px 0px 0px #000000;
     height: 0.8rem;
@@ -150,10 +158,12 @@ input[type=range] {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -5px;
-  }
+}
+
   input[type=range]:focus::-webkit-slider-runnable-track {
     background: #05C9D0;
-  }
+}
+
   input[type=range]::-moz-range-track {
     height: 3px;
     cursor: pointer;
@@ -161,7 +171,8 @@ input[type=range] {
     background: #05C9D0;
     border-radius: 1px;
     border: 0px solid #000000;
-  }
+}
+
   input[type=range]::-moz-range-thumb {
     box-shadow: 0px 0px 0px #000000;
     border: 1px solid #05C9D0;
@@ -170,26 +181,30 @@ input[type=range] {
     border-radius: 1rem;
     background: #F7F5F3;
     cursor: pointer;
-  }
+}
+
   input[type=range]::-ms-track {
     height: 3px;
     cursor: pointer;
     background: transparent;
     border-color: transparent;
     color: transparent;
-  }
+}
+
   input[type=range]::-ms-fill-lower {
     background: #2497E3;
     border: 0px solid #000000;
     border-radius: 2px;
     box-shadow: 0px 0px 0px #000000;
-  }
+}
+
   input[type=range]::-ms-fill-upper {
     background: #05C9D0;
     border: 0px solid #000000;
     border-radius: 2px;
     box-shadow: 0px 0px 0px #000000;
-  }
+}
+
   input[type=range]::-ms-thumb {
     margin-top: 1px;
     box-shadow: 0px 0px 0px #000000;
@@ -199,13 +214,15 @@ input[type=range] {
     border-radius: 1rem;
     background: #F7F5F3;
     cursor: pointer;
-  }
+}
+
   input[type=range]:focus::-ms-fill-lower {
     background: #05C9D0;
-  }
+}
+
   input[type=range]:focus::-ms-fill-upper {
     background: #05C9D0;
-  }
+}
 
 .volume_range {
     width: 6rem;

@@ -1,6 +1,4 @@
 const AddPlaylistDialog = function(dialogTitle) {
-    let actionCallback;
-    let closeCallback = () => {};
     const dialogRootElement = document.querySelector('.dialog')
     const title = dialogRootElement.querySelector('h1');
     const button = dialogRootElement.querySelector('button');
