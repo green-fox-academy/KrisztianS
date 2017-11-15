@@ -7,6 +7,7 @@ function ajax(method, data, endpoint, callback) {
     let xhr = new XMLHttpRequest();
     data = data ? data : null;
     xhr.open(method, endpoint);
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             let resp = JSON.parse(xhr.responseText)

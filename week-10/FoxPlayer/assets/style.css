@@ -44,21 +44,26 @@
     background-size: contain;
 }
 
+.appendable_list_div {
+    height: 14.5rem;
+    overflow-y: scroll;
+}
+
 .playlists {
     background-color: #F6F5F4;
     grid-area: playlists;
     display: flex;
     flex-wrap: wrap;
-    overflow-y: scroll;
 }
-.playlists > div:nth-child(even) {
+
+.appendable_list_div > div:nth-child(even) {
     background: #EBEAE8;
 } 
 
 .playlist_element {
     display: flex;
     align-items: center;
-    width: 25rem;
+    width: 23rem;
     line-height: 3rem;
     padding-left: 1rem;
 }
@@ -81,7 +86,6 @@
     height: 2.25rem;
     line-height: 1rem;
     position: relative;
-    padding-left: 1rem;
 }
 
 .playlist_add_icon {
@@ -94,8 +98,7 @@
 }
 
 .container h3 {
-    margin: 0;
-    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .tracks {
