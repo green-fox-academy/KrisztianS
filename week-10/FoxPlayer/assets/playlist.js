@@ -21,22 +21,15 @@ const Playlist = function() {
         })
     }
 
-    function renderTracks(res) {
-        res.forEach(function(res){
-            let trackname = document.createElement('div')
-            trackname.setAttribute("class", "track_element")
-            trackname.innerHTML = res.title
-            tracks.appendChild(trackname)
-        })
+    function load() {
+        GetPlaylist(renderLists)
     }
     
-    ajax('GET', '/playlists', renderLists)
-    ajax('GET', '/alltracks', renderTracks)
+    load()
     
     return {
         createDialog
     }
-
 }
 
 Playlist_module = Playlist()

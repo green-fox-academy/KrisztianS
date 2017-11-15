@@ -14,3 +14,7 @@ function ajax(method, endpoint, callback) {
     }
     xhr.send()
 }
+
+const GetPlaylist = function(callback) {
+    ajax('GET', '/playlists', callback)
+}
