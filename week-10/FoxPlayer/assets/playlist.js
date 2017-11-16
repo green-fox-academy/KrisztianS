@@ -4,7 +4,7 @@ const Playlist = function() {
         const playlist_add_icon = document.querySelector('.playlist_add_icon')
         playlist_add_icon.addEventListener('click', () => {
             let newPlaylist = window.prompt('Create new playlist:')
-            if (newPlaylist != null) {
+            if (newPlaylist != "") {
                 let data = {'title': newPlaylist}
                 ajax('POST', data, '/addplaylist', load)
             }
