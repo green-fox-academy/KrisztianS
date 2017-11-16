@@ -18,6 +18,7 @@ var lists = [
     { "id": 5, "title": "Fox house", "system": 0},
 ]
 var i = 6
+
 app.get('/playlists', function(req, res){
     res.send(lists)
 })

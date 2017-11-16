@@ -60,20 +60,37 @@
     background: #EBEAE8;
 } 
 
-.playlist_element {
-    display: flex;
-    align-items: center;
+.playlist_element {   
     width: 23rem;
     line-height: 3rem;
     padding-left: 1rem;
 }
 
+.playlist_del_icon {
+    height: 1rem;
+    width: 1rem;
+    float: right;
+    padding: 0.2rem 1.5rem 0rem 1rem;
+}
+
+.playlist_del_icon img {
+    height: 1.2rem;
+}
+
 .track_element {
-    display: flex;
     align-items: center;
     width: 22.77rem;
     height: 3.75rem;
     line-height: 3rem;
+    padding-left: 1rem;
+}
+
+.durationspan {
+    float: right;
+    padding-right: 1rem;
+}
+
+.tracktitle {
     padding-left: 1rem;
 }
 
