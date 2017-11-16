@@ -19,8 +19,8 @@ const Playlist = function() {
     function renderLists(res) {
         appendable_list_div.innerHTML = '<div class="playlist_element">All tracks</div>'
         
-        function isSystemList(systemnum) {
-            let del_icon = '<span class="playlist_del_icon">' +'<img src="../assets/delete_icon.svg">' + '</span>'
+        function isSystemList(id, systemnum) {
+            let del_icon = '<span id="' + id + '" class="playlist_del_icon">' +'<img src="../assets/delete_icon.svg">' + '</span>'
             if (systemnum == '0') {
                 return del_icon
             } else return ""
@@ -29,8 +29,18 @@ const Playlist = function() {
         res.forEach(function(res){
             let listname = document.createElement('div')
             listname.setAttribute("class", "playlist_element")
-            listname.innerHTML = res.title + isSystemList(res.system)          
+            listname.setAttribute("id", res.id)
+            listname.innerHTML = res.title + isSystemList(res.id, res.system)          
             appendable_list_div.appendChild(listname)
+            
+        })
+        delete_buttons = appendable_list_div.querySelectorAll('span')
+        delete_buttons.forEach(function(button){
+            button.addEventListener('click', function() {
+                ajax('DELETE', {}, '/delplaylist/' + this.id, () => {
+                    this.parentNode.remove()
+                })
+            })
         })
     }
 

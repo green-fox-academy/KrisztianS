@@ -37,4 +37,11 @@ app.post('/addplaylist', function(req, res){
     i++
 })
 
+app.delete('/delplaylist/:id', function(req, res){
+    lists = lists.filter(function(playlist){
+        return playlist.id != req.params.id
+    })
+    res.send({ok: 'ok'})
+})
+
 app.listen(8080)

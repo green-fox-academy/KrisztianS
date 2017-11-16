@@ -75,6 +75,7 @@
 
 .playlist_del_icon img {
     height: 1.2rem;
+    cursor: pointer;
 }
 
 .track_element {
@@ -138,7 +139,8 @@
 .currently_played img {
     height: 1.2rem;
     width: 1.2  rem;
-    padding: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
 }
 
 .control_panel img {
