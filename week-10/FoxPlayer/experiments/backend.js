@@ -7,6 +7,22 @@ app.use(express.json())
 app.use('/assets', express.static('../assets'))
 express.json.type = "application/json"
 
+var mysql = require("mysql");
+
+var conn = mysql.createConnection({
+  host: "localhost:8080",
+  user: "Krisztian",
+  password: "12345",
+  database: 'FoxPlayer'
+});
+
+conn.connect(function(err){
+  if(err){
+    console.log("Error connecting to the database");
+  } else {
+  console.log("Connection established"); }
+});
+
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/player.html');  
 })
